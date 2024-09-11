@@ -1,0 +1,13 @@
+[workspace]
+members = [
+    "packages/yvs"
+]
+
+[workspace.package]
+authors = ["yoseio <yoseio@brainoid.dev>"]
+edition = "2021"
+license = "MIT"
+publish = false
+readme = "README.md"
+repository = "https://github.com/yoseio/Y.git"
+version = "0.1.0"
