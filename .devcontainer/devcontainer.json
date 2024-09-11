@@ -1,0 +1,15 @@
+{
+  "name": "Y",
+  "image": "mcr.microsoft.com/devcontainers/base:bullseye",
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": {},
+    "ghcr.io/devcontainers/features/rust:1": {}
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "fill-labs.dependi"
+      ]
+    }
+  }
+}
