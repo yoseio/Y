@@ -1,0 +1,30 @@
+name: CI
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    types: [opened, synchronize]
+
+jobs:
+  build:
+    name: Build and Test
+
+    runs-on: ubuntu-latest
+    env:
+     TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
+     TURBO_TEAM: ${{ vars.TURBO_TEAM }}
+     TURBO_REMOTE_ONLY: true
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          cache: 'npm'
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          components: rust-std
+          target: wasm32-unknown-unknown
+      - uses: taiki-e/install-action@wasm-pack
+      - run: npm ci
+      - run: npm run build

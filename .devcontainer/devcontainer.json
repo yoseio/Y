@@ -1,0 +1,23 @@
+{
+  "name": "Y",
+  "image": "mcr.microsoft.com/devcontainers/base:bullseye",
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": {},
+    "ghcr.io/devcontainers/features/rust:1": {}
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "eamodio.gitlens",
+        "fill-labs.dependi",
+        "GitHub.copilot",
+        "GitHub.vscode-codeql",
+        "GitHub.vscode-github-actions",
+        "GitHub.vscode-pull-request-github"
+      ]
+    }
+  },
+  "onCreateCommand": {
+    "wasm-tools": "cargo install wasm-pack wasm-bindgen-cli"
+  }
+}
