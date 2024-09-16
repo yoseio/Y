@@ -1,0 +1,21 @@
+{
+  "name": "@y/yvs",
+  "version": "0.1.0",
+  "scripts": {
+    "build": "wasm-pack build --target bundler --out-dir dist"
+  },
+  "files": [
+    "./dist/yvs_bg.wasm",
+    "./dist/yvs.js",
+    "./dist/yvs_bg.js",
+    "./dist/yvs.d.ts"
+  ],
+  "main": "./dist/yvs.js",
+  "types": "./dist/yvs.d.ts",
+  "sideEffects": [
+    "./dist/yvs.js",
+    "./dist/snippets/*"
+  ],
+  "private": true,
+  "type": "module"
+}
