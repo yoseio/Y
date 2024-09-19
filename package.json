@@ -30,6 +30,7 @@
   "packageManager": "npm@10.8.2",
   "private": true,
   "workspaces": [
+    "packages/components",
     "packages/yss",
     "packages/yvs"
   ]
